@@ -1,6 +1,12 @@
 
 package zooapp;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
 /**
  Un zoológico necesita cargar los animales q posee en el sector norte de este, allí se encuentran 6 especies, 
   todos animales comparten algunas características como, peso, nombre, sexo,edad , y algunos particulares como
@@ -17,11 +23,37 @@ También el sistema debe permitir el logueo al sistema de los empleados antes de
  */
 public class ZooApp {
 
-    /**
-     * @param args the command line arguments
-     */
+    private static List<Animal> animales = new ArrayList<>();
+    private static List<Empleado> empleados =  new ArrayList<>();
+    private static Map<String,String> usuarios = new HashMap<>();
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        usuarios.put("usuario1","password1");
+        
+        
+      Scanner leer = new Scanner(System.in);
+           
+      
+      boolean autenticado = false;
+      
+      do {
+          System.out.println("Usuario: ");
+          String usuario = leer.nextLine();
+          System.out.println("Contraseña: ");
+          String contraseña = leer.nextLine();
+          autenticado = autenticar(usuario, contraseña);
+      }while(!autenticado);
+        
+        
+        
+        
     }
+    
+    private static boolean autenticar(String usuario, String contraseña){
+        String contraseñaGuardada = usuarios.getOrDefault(usuario, "");
+        return contraseñaGuardada.equals(contraseña);
+    }
+    
+    
     
 }
