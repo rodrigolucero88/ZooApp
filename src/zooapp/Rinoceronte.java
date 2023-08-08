@@ -9,21 +9,23 @@ package zooapp;
  * @author Leandro
  */
 public class Rinoceronte extends Animal {
-    private double largoCuerno;
-    public Rinoceronte(int peso, String nombre, String sexo, int edad,double largoCuerno) {
-        super(peso, nombre, sexo, edad);
-        this.largoCuerno=largoCuerno;
-        
+ private double largocuerno;
+
+    public Rinoceronte(int codigo, String nombre, String sexo, int edad, double peso) {
+        super(codigo, nombre, sexo, edad, peso);
     }
 
-    public double getLargoCuerno() {
-        return largoCuerno;
+    public double getLargocuerno() {
+        return largocuerno;
     }
 
-    public void setLargoCuerno(double largoCuerno) {
-        this.largoCuerno = largoCuerno;
+    public void setLargocuerno(double largocuerno) {
+        this.largocuerno = largocuerno;
     }
-
+       @Override
+    public double calcularComida() {
+        return 3 * getPeso();
+    }
    
     
 }

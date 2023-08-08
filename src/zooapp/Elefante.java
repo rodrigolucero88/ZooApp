@@ -22,7 +22,10 @@ public class Elefante extends Animal{
     public void setLargoTrompa(int largoTrompa) {
         this.largoTrompa = largoTrompa;
     }
-
+ @Override
+    public double calcularComida() {
+        return 4 * getPeso();
+    }
     
     
 }
