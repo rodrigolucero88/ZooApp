@@ -9,24 +9,22 @@ package zooapp;
  * @author Leandro
  */
 public class Animal {
-    private int peso;
+    private int codigo;
     private String nombre;
     private String sexo;
     private int edad;
+    private double peso;
 
-    public Animal(int peso, String nombre, String sexo, int edad) {
-        this.peso = peso;
+    public Animal(int codigo, String nombre, String sexo, int edad, double peso) {
+        this.codigo = codigo;
         this.nombre = nombre;
         this.sexo = sexo;
         this.edad = edad;
-    }
-
-    public int getPeso() {
-        return peso;
-    }
-
-    public void setPeso(int peso) {
         this.peso = peso;
+    }
+    
+    public int getCodigo() {
+        return codigo;
     }
 
     public String getNombre() {
@@ -52,7 +50,17 @@ public class Animal {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+    public double calcularComida() {
+        return 0; // Método por defecto, será implementado en las subclases
+    }
 
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
     @Override
     public String toString() {
         return "Animal{" + "peso=" + peso + ", nombre=" + nombre + ", sexo=" + sexo + ", edad=" + edad + '}';

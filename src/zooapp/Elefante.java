@@ -11,9 +11,8 @@ package zooapp;
 public class Elefante extends Animal{
     private int largoTrompa;
 
-    public Elefante(int peso, String nombre, String sexo, int edad,int largoTrompa) {
-        super(peso, nombre, sexo, edad);
-        this.largoTrompa=largoTrompa;
+    public Elefante(int codigo, String nombre, String sexo, int edad, double peso) {
+        super(codigo, nombre, sexo, edad, peso);
     }
 
     public int getLargoTrompa() {
@@ -23,5 +22,7 @@ public class Elefante extends Animal{
     public void setLargoTrompa(int largoTrompa) {
         this.largoTrompa = largoTrompa;
     }
+
+    
     
 }
