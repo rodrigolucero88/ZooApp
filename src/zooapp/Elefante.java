@@ -8,6 +8,20 @@ package zooapp;
  *
  * @author Leandro
  */
-public class Elefante {
+public class Elefante extends Animal{
+    private int largoTrompa;
+
+    public Elefante(int peso, String nombre, String sexo, int edad,int largoTrompa) {
+        super(peso, nombre, sexo, edad);
+        this.largoTrompa=largoTrompa;
+    }
+
+    public int getLargoTrompa() {
+        return largoTrompa;
+    }
+
+    public void setLargoTrompa(int largoTrompa) {
+        this.largoTrompa = largoTrompa;
+    }
     
 }
