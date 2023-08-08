@@ -53,7 +53,18 @@ public class ZooApp {
         String contraseñaGuardada = usuarios.getOrDefault(usuario, "");
         return contraseñaGuardada.equals(contraseña);
     }
-    
-    
+     
+    private static void mostrarMenu() {
+        System.out.println("----- Menú -----");
+        System.out.println("1. Agregar animal");
+        System.out.println("2. Agregar empleado");
+        System.out.println("3. Eliminar animal");
+        System.out.println("4. Eliminar empleado");
+        System.out.println("5. Consultar animales");
+        System.out.println("6. Consultar empleados");
+        System.out.println("7. Alimentar animal");
+        System.out.println("8. Salir");
+        System.out.print("Ingrese una opción: ");
+    }
     
 }
