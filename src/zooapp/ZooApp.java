@@ -204,5 +204,27 @@ public class ZooApp {
                 System.out.println("Empleado no encontrado");
             }
      }
+       private static Animal encontrarAnimalPorCodigo(int codigo){
+        for (Animal animal : animales) {
+           if (animal.getCodigo()==(codigo)){
+               return animal;
+           }
+            
+        }
+          return null;
+    }
+       private static void eliminarAnimal(Scanner leer){
+            System.out.println("Ingrese el codigo del animal");
+            int codigo = leer.nextInt();
+            
+            Animal animalEncontrado= encontrarAnimalPorCodigo(codigo);
+            if (animalEncontrado != null) {
+                empleados.remove(animalEncontrado);
+                System.out.println("Se elimino al empleado");
+                
+            }else{
+                System.out.println("Empleado no encontrado");
+            }
+     }
 }//fin clase
 
