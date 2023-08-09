@@ -66,6 +66,9 @@ public class ZooApp {
               case 5:
                   consultarAnimales();
                   break;
+              case 7:
+                  alimentarAnimal(leer);
+                  break;
               case 8:
                   System.out.println("Saliendo...");
                   break;
@@ -225,6 +228,21 @@ public class ZooApp {
             }else{
                 System.out.println("Empleado no encontrado");
             }
+       }
+            private static void alimentarAnimal(Scanner leer){
+                System.out.println("Ingreso el  codigo del animal a alimentar");
+                int codigo = leer.nextInt();
+                leer.nextLine();
+                
+                Animal animalEncontrado = encontrarAnimalPorCodigo(codigo);
+                if (animalEncontrado != null){
+                    double comida = animalEncontrado.calcularComida();
+                    System.out.println("Se debe dar " + comida + " kg de comida a " + animalEncontrado.getNombre());
+                }else{
+                    System.out.println("Animal no encontrado");
+                }
+                
+            }
      }
-}//fin clase
+
 
