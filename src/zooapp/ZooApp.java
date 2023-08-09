@@ -58,7 +58,7 @@ public class ZooApp {
                   agregarEmpleado(leer);
                   break;
               case 3:
-                  eliminarAnimal();
+                  eliminarAnimal(leer);
                   break;
               case 4:
                   eliminarEmpleado(leer);
