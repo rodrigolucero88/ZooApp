@@ -9,21 +9,21 @@ package zooapp;
  * @author Kawaa
  */
 class Ave extends Animal {
-    private String especie;
+    private String especieAve;
     private String color;
 
-    public Ave(int codigo, String nombre, String sexo, int edad, double peso, String especie, String color) {
+    public Ave(int codigo, String nombre, String sexo, int edad, double peso, String especieAve, String color) {
         super(codigo, nombre, sexo, edad, peso);
-        this.especie = especie;
+        this.especieAve = especieAve;
         this.color = color;
     }
 
     public String getEspecie() {
-        return especie;
+        return especieAve;
     }
 
     public void setEspecie(String especie) {
-        this.especie = especie;
+        this.especieAve = especie;
     }
 
     public String getColor() {

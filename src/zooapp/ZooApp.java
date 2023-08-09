@@ -121,12 +121,14 @@ public class ZooApp {
                 nuevoAnimal=new Mono(codigo, nombre, sexo, edad, peso, especie);
                 break;
             case 6:
-                System.out.println("Ingrese largo del cuello:");
-                String especie=leer.nextLine();
-                leer.nextLine();
+                System.out.println("Ingrese la especie del ave:");
+                String especieAve=leer.nextLine();
+                System.out.println("Ingrese el color del ave: ");
                 String color=leer.nextLine();
-                nuevoAnimal=new Ave(codigo, nombre, sexo, edad, peso, especie,color);
+                nuevoAnimal=new Ave(codigo, nombre, sexo, edad, peso, especieAve,color);
                 break;
+            default:
+                System.out.println("Opcion de especie inválida.");
     }
         animales.add(nuevoAnimal);
     }

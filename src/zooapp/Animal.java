@@ -51,7 +51,7 @@ public class Animal {
         this.edad = edad;
     }
     public double calcularComida() {
-        return 0; // Método por defecto, será implementado en las subclases
+        return 0; 
     }
 
     public double getPeso() {
