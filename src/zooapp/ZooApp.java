@@ -54,8 +54,15 @@ public class ZooApp {
               case 1:
                   agregarAnimal(leer);
                   break;
+              case 2:
+                  agregarEmpleado(leer);
+                  break;
+              case 3:
+                  eliminarAnimal
+                  break;
               case 5:
                   consultarAnimales();
+                  break;
               case 8:
                   System.out.println("Saliendo...");
                   break;
@@ -162,8 +169,15 @@ public class ZooApp {
             System.out.println("------------------------------------");
         }
             
+    }//finconsultarAnimal
+    private static void agregarEmpleado(Scanner leer){
+        System.out.println("Ingrese el nombre del Empleado");
+        String nombre=leer.nextLine();
+        System.out.println("ingrese el turno del empleado");
+        String turno=leer.nextLine();
+        Empleado nuevoEmpleado= new Empleado(nombre, turno);
+        empleados.add(nuevoEmpleado);
     }
     
-    
-}
+}//fin clase
 
