@@ -68,6 +68,7 @@ public class ZooApp {
                   break;
               case 6:
                   consultarEmpleado();
+                  break;
               case 7:
                   alimentarAnimal(leer);
                   break;
@@ -107,10 +108,10 @@ public class ZooApp {
         leer.nextLine();
         System.out.println("Ingrese el nombre del animal");
         String nombre=leer.nextLine();
-        leer.nextLine();
+     
         System.out.println("Ingrese el sexo del animal");
         String sexo=leer.nextLine();
-        leer.nextLine();
+        
         System.out.println("ingrese edad del animal");
         int edad=leer.nextInt();
         leer.nextLine();
