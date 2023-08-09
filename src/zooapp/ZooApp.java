@@ -66,5 +66,24 @@ public class ZooApp {
         System.out.println("8. Salir");
         System.out.print("Ingrese una opción: ");
     }
-    
+    private static void agregarAnimal(Scanner leer){
+        System.out.println("Ingrese el codigo del animal");
+        int codigo=leer.nextInt();
+        leer.nextLine();
+        System.out.println("Ingrese el nombre del animal");
+        String nombre=leer.next();
+        leer.nextLine();
+        System.out.println("Ingrese el sexo del animal");
+        String sexo=leer.next();
+        leer.nextLine();
+        System.out.println("ingrese edad del animal");
+        int edad=leer.nextInt();
+        leer.nextLine();
+        System.out.println("ingrese el peso del animal");
+        double peso=leer.nextDouble();
+        leer.nextLine();
+        
+        
+        
+    }
 }

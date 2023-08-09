@@ -9,11 +9,11 @@ package zooapp;
  * @author Leandro
  */
 public class Animal {
-    private int codigo;
-    private String nombre;
-    private String sexo;
-    private int edad;
-    private double peso;
+    protected int codigo;
+    protected String nombre;
+    protected String sexo;
+    protected int edad;
+    protected double peso;
 
     public Animal(int codigo, String nombre, String sexo, int edad, double peso) {
         this.codigo = codigo;
