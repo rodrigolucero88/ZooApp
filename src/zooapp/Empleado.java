@@ -32,5 +32,10 @@ public class Empleado {
     public void setTurno(String Turno) {
         this.Turno = Turno;
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" + "nombre=" + nombre + ", Turno=" + Turno + '}';
+    }
     
 }
