@@ -44,6 +44,24 @@ public class ZooApp {
           autenticado = autenticar(usuario, contraseña);
       }while(!autenticado);
         
+      int opcion;
+      
+      do{
+          mostrarMenu();
+          opcion=leer.nextInt();
+          leer.nextLine();
+          switch(opcion){
+              case 1:
+                  agregarAnimal(leer);
+                  break;
+              case 5:
+                  consultarAnimales();
+              case 8:
+                  System.out.println("Saliendo...");
+                  break;
+          }
+      }while(opcion !=8);
+          
         
         
         
@@ -132,4 +150,20 @@ public class ZooApp {
     }
         animales.add(nuevoAnimal);
     }
+    
+    private static void consultarAnimales (){
+        System.out.println("------ Lista de animales------");
+        for (Animal animal : animales){
+            System.out.println("Codigo: " + animal.getCodigo());
+            System.out.println("Nombre: " + animal.getNombre());
+            System.out.println("Sexo: " + animal.getSexo());
+            System.out.println("Edad: " + animal.getEdad());
+            System.out.println("Peso: " + animal.getPeso());
+            System.out.println("------------------------------------");
+        }
+            
+    }
+    
+    
 }
+
