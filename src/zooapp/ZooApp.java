@@ -66,16 +66,20 @@ public class ZooApp {
               case 5:
                   consultarAnimales();
                   break;
+              case 6:
+                  agregarEmpleado(leer);
               case 7:
                   alimentarAnimal(leer);
                   break;
               case 8:
                   System.out.println("Saliendo...");
                   break;
+              default:
+                  System.out.println("Opcion invalida.");
           }
       }while(opcion !=8);
           
-        
+        leer.close();
         
         
     }
@@ -179,10 +183,36 @@ public class ZooApp {
     private static void agregarEmpleado(Scanner leer){
         System.out.println("Ingrese el nombre del Empleado");
         String nombre=leer.nextLine();
-        System.out.println("ingrese el turno del empleado");
-        String turno=leer.nextLine();
+        System.out.println("Elija el turno del empleado: \n " +
+                "1. Turno 1\n "+
+                "2. Turno 2\n "+
+                "3. Turno 3\n "+
+                "4. Turno 4\n "+
+                "Ingrese la opcion: ");
+        int turnoSeleccionado =leer.nextInt();
+        String turno = "";
+        
+        switch (turnoSeleccionado){
+            case 1:
+                turno = "Turno 1 de 6 a 12";
+                break;
+            case 2:
+                turno = "Turno 2 de 12 a 18";
+                break;
+            case 3:
+                turno = "Turno 3 de 18 a 24";
+                break;
+            case 4:
+                turno = "Turno 4 de 24 a 6";
+                break;
+            default: 
+                System.out.println("Opcion de turno invalida");
+                return;
+        }
+        
         Empleado nuevoEmpleado= new Empleado(nombre, turno);
         empleados.add(nuevoEmpleado);
+        System.out.println("Empleado agregado exitosamente.");
     }
     private static void consultarEmpleado(){
         System.out.println("-------Lista de empleados-------");
