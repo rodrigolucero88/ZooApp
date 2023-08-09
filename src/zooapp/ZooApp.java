@@ -58,7 +58,7 @@ public class ZooApp {
                   agregarEmpleado(leer);
                   break;
               case 3:
-                  eliminarAnimal
+                  eliminarAnimal();
                   break;
               case 5:
                   consultarAnimales();
@@ -177,6 +177,16 @@ public class ZooApp {
         String turno=leer.nextLine();
         Empleado nuevoEmpleado= new Empleado(nombre, turno);
         empleados.add(nuevoEmpleado);
+    }
+    
+    private static Empleado encontrarEmpleadoPorNombre(String nombre){
+        for (Empleado empleado : empleados) {
+           if (empleado.getNombre().equalsIgnoreCase(nombre)){
+               return empleado;
+           }
+            
+        }
+          return null;
     }
     
 }//fin clase
