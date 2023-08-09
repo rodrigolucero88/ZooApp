@@ -60,6 +60,9 @@ public class ZooApp {
               case 3:
                   eliminarAnimal();
                   break;
+              case 4:
+                  eliminarEmpleado(leer);
+                  break;
               case 5:
                   consultarAnimales();
                   break;
@@ -188,6 +191,18 @@ public class ZooApp {
         }
           return null;
     }
-    
+       private static void eliminarEmpleado(Scanner leer){
+            System.out.println("Ingrese el nombre del empelado a eliminar");
+            String nombre = leer.nextLine();
+            
+            Empleado empleadoEncontrado= encontrarEmpleadoPorNombre(nombre);
+            if (empleadoEncontrado != null) {
+                empleados.remove(empleadoEncontrado);
+                System.out.println("Se elimino al empleado");
+                
+            }else{
+                System.out.println("Empleado no encontrado");
+            }
+     }
 }//fin clase
 
