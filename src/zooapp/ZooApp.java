@@ -71,18 +71,29 @@ public class ZooApp {
         int codigo=leer.nextInt();
         leer.nextLine();
         System.out.println("Ingrese el nombre del animal");
-        String nombre=leer.next();
+        String nombre=leer.nextLine();
         leer.nextLine();
         System.out.println("Ingrese el sexo del animal");
-        String sexo=leer.next();
+        String sexo=leer.nextLine();
         leer.nextLine();
         System.out.println("ingrese edad del animal");
         int edad=leer.nextInt();
         leer.nextLine();
         System.out.println("ingrese el peso del animal");
         double peso=leer.nextDouble();
+       
+        System.out.print("Elija la especie del animal:\n" +
+                "1. Elefante\n" +
+                "2. Jirafa\n" +
+                "3. Rinoceronte\n" +
+                "4. Cocodrilo\n" +
+                "5. Mono\n" +
+                "6. Ave\n" +
+                "Ingrese la opción: ");
+        int especieSeleccionada = leer.nextInt();
         leer.nextLine();
-        
+
+        Animal nuevoAnimal = null;
         
         
     }
