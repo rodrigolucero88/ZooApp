@@ -61,9 +61,6 @@ public class Animal {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-    @Override
-    public String toString() {
-        return "Animal{" + "peso=" + peso + ", nombre=" + nombre + ", sexo=" + sexo + ", edad=" + edad + '}';
-    }
+ 
     
 }
