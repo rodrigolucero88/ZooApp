@@ -3,6 +3,7 @@ package zooapp;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -44,9 +45,10 @@ public class ZooApp {
           autenticado = autenticar(usuario, contraseña);
       }while(!autenticado);
         
-      int opcion;
+      int opcion=0;
       
       do{
+        try{
           mostrarMenu();
           opcion=leer.nextInt();
           leer.nextLine();
@@ -78,6 +80,12 @@ public class ZooApp {
               default:
                   System.out.println("Opcion invalida.");
           }
+          }catch(InputMismatchException e){
+                  System.out.println("entrada no valida ingrese un numero valido");
+                  leer.nextLine();
+                  
+          
+        }
       }while(opcion !=8);
           
         leer.close();
@@ -262,10 +270,10 @@ public class ZooApp {
             Animal animalEncontrado= encontrarAnimalPorCodigo(codigo);
             if (animalEncontrado != null) {
                 empleados.remove(animalEncontrado);
-                System.out.println("Se elimino al empleado");
+                System.out.println("Se elimino el animal");
                 
             }else{
-                System.out.println("Empleado no encontrado");
+                System.out.println("animal no encontrado");
             }
        }
             private static void alimentarAnimal(Scanner leer){
