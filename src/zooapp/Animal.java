@@ -8,7 +8,7 @@ package zooapp;
  *
  * @author Leandro
  */
-public abstract class  Animal {
+public  class  Animal {
     protected int codigo;
     protected String nombre;
     protected String sexo;
@@ -50,7 +50,9 @@ public abstract class  Animal {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    public abstract double calcularComida();
+    public  double calcularComida(){
+        return 0;
+    }
        
 
     public double getPeso() {
