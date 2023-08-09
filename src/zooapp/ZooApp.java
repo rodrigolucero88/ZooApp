@@ -67,7 +67,7 @@ public class ZooApp {
                   consultarAnimales();
                   break;
               case 6:
-                  agregarEmpleado(leer);
+                  consultarEmpleado();
               case 7:
                   alimentarAnimal(leer);
                   break;
