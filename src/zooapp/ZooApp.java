@@ -94,7 +94,40 @@ public class ZooApp {
         leer.nextLine();
 
         Animal nuevoAnimal = null;
-        
-        
+        switch(especieSeleccionada){
+            case 1:
+                System.out.println("Ingrese largo de la trompa:");
+                int largoTrompa=leer.nextInt();
+                nuevoAnimal=new Elefante(codigo, nombre, sexo, edad, peso, largoTrompa);
+                break;
+            case 2:
+                System.out.println("Ingrese largo del cuello:");
+                int largoCuello=leer.nextInt();
+                nuevoAnimal=new Jirafa(codigo, nombre, sexo, edad, peso, largoCuello);
+                break;
+            case 3:
+                System.out.println("Ingrese largo del cuerno:");
+                int largoCuerno=leer.nextInt();
+                nuevoAnimal=new Rinoceronte(codigo, nombre, sexo, edad, peso, largoCuerno);
+                break;
+            case 4:
+                System.out.println("Ingrese longitud del cocodrilo:");
+                int longitud=leer.nextInt();
+                nuevoAnimal=new Cocodrillo(codigo, nombre, sexo, edad, peso, longitud);
+                break;
+            case 5:
+                System.out.println("Ingrese la especie:");
+                String especie=leer.nextLine();
+                nuevoAnimal=new Mono(codigo, nombre, sexo, edad, peso, especie);
+                break;
+            case 6:
+                System.out.println("Ingrese largo del cuello:");
+                String especie=leer.nextLine();
+                leer.nextLine();
+                String color=leer.nextLine();
+                nuevoAnimal=new Ave(codigo, nombre, sexo, edad, peso, especie,color);
+                break;
+    }
+        animales.add(nuevoAnimal);
     }
 }

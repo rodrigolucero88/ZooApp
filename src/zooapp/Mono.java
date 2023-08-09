@@ -16,6 +16,14 @@ class Mono extends Animal {
         this.especie = especie;
     }
 
+    public String getEspecie() {
+        return especie;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+    
     @Override
     public double calcularComida() {
         return getPeso() / 4;

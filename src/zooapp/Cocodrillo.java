@@ -11,7 +11,7 @@ package zooapp;
 public class Cocodrillo extends Animal{
     private double longitud;
 
-    public Cocodrillo(double longitud, int codigo, String nombre, String sexo, int edad, double peso) {
+    public Cocodrillo( int codigo, String nombre, String sexo, int edad, double peso,double longitud) {
         super(codigo, nombre, sexo, edad, peso);
         this.longitud = longitud;
     }
